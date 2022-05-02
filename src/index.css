@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Rowdies:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-300 h-screen font-oswald;
+  }
+}
+
+@layer components {
+  .menu-item {
+    @apply p-5 inline-block border-b-4 border-black hover:border-white;
+  }
+  .mega-sub-item {
+    @apply block p-2  hover:bg-white hover:text-black cursor-pointer;
+  }
+  .mega-sub-item-title {
+    @apply block font-semibold text-xl mb-5 cursor-default;
+  }
+  .menu-sub-item {
+    @apply block px-7 py-2 hover:bg-white hover:text-black;
+  }
+}
+
+@layer utilities {
+  .sub-dropdown:hover > .sub-dropdown-content {
+    top: 0;
+    visibility: visible;
+    opacity: 100;
+  }
+  .sub-dropdown:hover > a {
+    background-color: #fff;
+    color: #000;
+  }
+}
